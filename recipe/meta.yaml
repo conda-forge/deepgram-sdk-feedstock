@@ -1,5 +1,5 @@
 {% set name = "deepgram-sdk" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deepgram-sdk-{{ version }}.tar.gz
-  sha256: d2f9cc945d8849498271a0014e33b41f593ce719cebdf01044bd69003ee40b36
+  sha256: 26b7ca12f6023239e3a3682a762bf40733f36a46def6cba9f96864026a138c51
 
 build:
   noarch: python
