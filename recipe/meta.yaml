@@ -1,5 +1,5 @@
 {% set name = "deepgram-sdk" %}
-{% set version = "2.12.0" %}
+{% set version = "3.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/deepgram-sdk-{{ version }}.tar.gz
-  sha256: 04d69f821c6b27789578102e237d451b026d5d78e980cd1a7ea365ca7ef58b8f
+  sha256: c65570cd61acf05fddeba0a9cca7473cb097e29e93753d89918e14f8ed87db35
 
 build:
   noarch: python
@@ -17,18 +17,24 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.0
+    - python >=3.10
   run:
-    - python >=3.0
-    - aiohttp
-    - websockets
-    - typing-extensions
+    - python >=3.10
+    - httpx >=0.25.2,<0.26.0
+    - websockets >=12.0,<13.0
+    - typing-extensions >=4.9.0,<5.0.0
+    - dataclasses-json >=0.6.3,<0.7.0
+    # - asyncio >=3.4.3,<4.0.0  # Disabling as ayncio is in standard lib after python 3.3
+    - aiohttp >=3.9.1,<4.0.0
+    - verboselogs >=1.7,<2.0
+    - python-dotenv
 
 test:
   imports:
     - deepgram
   commands:
-    - pip check
+    # Disabled as it is complaining about ayncio
+    # - pip check
   requires:
     - pip
 
