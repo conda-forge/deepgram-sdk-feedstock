@@ -1,5 +1,5 @@
 {% set name = "deepgram-sdk" %}
-{% set version = "3.3.2" %}
+{% set version = "3.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 6be0ef0848f7de2281f93ccc2d5a32f03c06702f117c630ffc76ae32cef22da3
+  sha256: 7a39c482cab06cd4e7b8c590471396fdc9620e9f60d0efe1982461df80e03aff
 
 build:
   noarch: python
@@ -27,6 +27,7 @@ requirements:
     - aiohttp >=3.9.1,<4.0.0
     - aiofiles >=23.2.1,<24.0.0
     - aenum >=3.1.0,<4.0.0
+    - deprecation >=2.1.0,<3.0.0
 
 test:
   imports:
