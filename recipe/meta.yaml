@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.10,<4.0
+    - setuptools
   run:
     - python >=3.10,<4.0
     - httpx >=0.25.2,<0.26.0
