@@ -42,10 +42,6 @@ tests:
       # No Pip check due to asyncio
       pip_check: false
       python_version: ${{ python_min }}.*
-  - requirements:
-      run:
-        - pyaudio >=0.2.14,<0.3.0
-        - python ${{ python_min }}.*
 
 about:
   summary: Python SDK for the Deepgram automated speech recognition platform.
