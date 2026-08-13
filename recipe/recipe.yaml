@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: deepgram-sdk
-  version: "7.6.0"
+  version: "7.7.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: e35b67e79f3d5e37e2384350ddfec30b5d086f80eaed0e71f9540e0ecec60a11
+  sha256: 4cce45c853d6caebbed62081d9118b915a2f3a2e54eb420ff5148c30e16dcffd
 
 build:
   number: 0
